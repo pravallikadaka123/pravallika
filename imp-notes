@@ -1,0 +1,2 @@
+the control centre is dependant on schema registry bcz 
+technically the control centre is listening for events on schema registry to visualize the data directly on kafka,which is managed by zookeeper
