@@ -7,3 +7,4 @@ We'll utilize a powerful stack of tools and technologies, including Apache Airfl
 44:29 Apache Spark and Cassandra setup
 49:33 Streaming data into cassandra
 
+entrypoint.sh---->we want to write sequence of command that airflow should follow when its trying to initialize web server or the scheduler
