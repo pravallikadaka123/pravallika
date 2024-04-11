@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d2b94a0-f186-480e-814b-203ffabc872c" name="Changes" comment="till now read the json file,cleaned it,wrote intial docker-compose.yml">
-      <change afterPath="$PROJECT_DIR$/script/entrypoint.sh" afterDir="false" />
+    <list default="true" id="8d2b94a0-f186-480e-814b-203ffabc872c" name="Changes" comment="wrote entrypoint.sh code,trying to write sequence of codes when airflow is trying to connect to web servers,...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAGS/kafa_stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/DAGS/kafa_stream.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +39,10 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -51,22 +53,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-compose.yml.broker: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.schema-registry: Compose Deployment.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "branch1"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml.broker: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.schema-registry: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;branch1&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Docker.docker-compose.yml.schema-registry: Compose Deployment">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml.broker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -159,7 +163,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712788138304</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="wrote entrypoint.sh code,trying to write sequence of codes when airflow is trying to connect to web servers,...">
+      <option name="closed" value="true" />
+      <created>1712815622843</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712815622843</updated>
+    </task>
+    <task id="LOCAL-00007" summary="wrote entrypoint.sh code,trying to write sequence of codes when airflow is trying to connect to web servers,...">
+      <option name="closed" value="true" />
+      <created>1712815678551</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712815678551</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +195,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="till now read the json file,cleaned it,wrote intial docker-compose.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="till now read the json file,cleaned it,wrote intial docker-compose.yml" />
+    <MESSAGE value="wrote entrypoint.sh code,trying to write sequence of codes when airflow is trying to connect to web servers,..." />
+    <option name="LAST_COMMIT_MESSAGE" value="wrote entrypoint.sh code,trying to write sequence of codes when airflow is trying to connect to web servers,..." />
   </component>
 </project>
