@@ -1,0 +1,35 @@
+#this file has the explanation of dockercompose.yml
+*webserver image
+
+1. **Image Specification**:
+   - The `webserver` service is using the official Apache Airflow Docker image version 2.6.0 with Python 3.9.
+
+2. **Command and Entrypoint**:
+   - The service will run the `webserver` command, which starts the Airflow webserver.
+   - It specifies a custom entrypoint script located at `/opt/airflow/script/entrypoint.sh` using the `entrypoint` field.
+
+3. **Dependencies**:
+   - The webserver depends on a service named `postgres`, which is likely a PostgreSQL database used by Airflow.
+
+4. **Environment Variables**:
+   - Environment variables are set to configure Airflow:
+     - `LOAD_EX`: Specifies whether to load example DAGs (`n` means "no").
+     - `EXECUTOR`: Specifies the task execution mode (`Sequential` means tasks are executed sequentially).
+     - `AIRFLOW__DATABASE__SQL_ALCHEMY_CONN`: Specifies the connection string for the Airflow metadata database.
+     - `AIRFLOW_WEBSERVER_SECRET_KEY`: Specifies a secret key for the Airflow webserver.
+
+5. **Logging Configuration**:
+   - Logging options are set to limit log file sizes and rotations.
+
+6. **Volumes**:
+   - Mounts local directories (`./dags`, `./script/entrypoint.sh`, `./requirements.txt`) to corresponding directories within the container. This allows sharing files between the host and the container.
+   - Specifically, `./script/entrypoint.sh` is mounted to `/opt/airflow/script/entrypoint.sh`, providing a custom entrypoint script to the container.
+
+7. **Ports**:
+   - Maps port `8080` of the host machine to port `8080` of the container, allowing access to the Airflow webserver through port `8080`.
+
+8. **Healthcheck**:
+   - Defines a healthcheck command to verify that the webserver is running (`[ -f /opt/airflow/airflow-webserver.pid ]` checks if a PID file exists).
+   - The healthcheck will run every 30 seconds, with a timeout of 30 seconds and 3 retries.
+
+Overall, this configuration sets up an Airflow webserver container with specific environment settings, mounts volumes for data and scripts, and ensures the service's availability through health checks.
